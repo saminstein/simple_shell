@@ -4,7 +4,7 @@
  * my_cd - function to change a directory
  * @cmd: tokenized command
  * Return: 1 on failure and 0 on success
- */ 
+ */
 int my_cd(char **cmd)
 {
 	char cwd[PATH_MAX];
@@ -35,6 +35,6 @@ int my_cd(char **cmd)
 		setenv("OLDPWD", _getenv("PWD"), 1);
 		setenv("PWD", cwd, 1);
 	}
-	
+
 	return (0);
 }
