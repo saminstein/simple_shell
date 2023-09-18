@@ -3,7 +3,7 @@
 /**
  * find_path - function to find the full path of a
  * command
- * @command: tokenized input
+ * @command: tokenized the input
  * Return: full path of the command
  */
 char *find_path(char *command)
