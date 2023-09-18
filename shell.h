@@ -33,6 +33,7 @@ extern char **environ;
 char *_getenv(char *name);
 
 void prompt(void);
+void get_signal(int sig);
 
 
 
@@ -49,4 +50,8 @@ int _strlen(char *s);
 
 void *_realloc(void *ptr, size_t size);
 
+
+int handle_builtin(char **cmd);
+
 #endif
+
