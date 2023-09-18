@@ -55,4 +55,11 @@ char *_strdup(char *str);
 void _memcpy(void *newptr, const void *ptr, size_t size);
 void *_realloc(void *ptr, size_t size);
 
+
+int is_builtin(char **cmd);
+
+
+/** BUILTINs **/
+int my_cd(char **cmd);
+
 #endif
