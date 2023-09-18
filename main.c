@@ -11,6 +11,7 @@ int main(void)
 	int status = 0;
 	size_t n;
 
+	signal(SIGINT, get_signal);
 	while (1)
 	{
 		user_input = NULL;
@@ -36,11 +37,9 @@ int main(void)
 			free(user_input);
 			continue;
 		}
- 		status = execute_cmd(cmd);
+		status = execute_cmd(cmd);
 		if (status == 1)
-		{
 			print_error(cmd, "not found\n");
-		}
 		free(cmd);
 		free(user_input);
 		user_input = NULL;

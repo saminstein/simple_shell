@@ -10,6 +10,19 @@ void print(char *c)
 }
 
 /**
+ * get_signal - handle signal
+ * @sig: signal
+ * Return: nothing
+ */
+void get_signal(int sig)
+{
+	if (sig == SIGINT)
+	{
+		print("\n($) ");
+	}
+}
+
+/**
  * print_error - prints error message
  * @cmd: array of command
  * @sms: error message to print out
