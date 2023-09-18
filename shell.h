@@ -55,7 +55,7 @@ char *_strdup(char *str);
 void _memcpy(void *newptr, const void *ptr, size_t size);
 void *_realloc(void *ptr, size_t size);
 
-void exit_shell(char **cmd, int status)
+void exit_shell(char **cmd, int status);
 
 
 int is_builtin(char **cmd);
