@@ -34,7 +34,6 @@ void *_realloc(void *ptr, size_t size)
  * @str: The string to duplicate
  * Return: duplicated string
  */
-/**REMEMBER TO FREE S AFTER USE!!**/
 char *_strdup(char *str)
 {
 	size_t str_len;
@@ -50,16 +49,15 @@ char *_strdup(char *str)
 }
 
 /**
- * _memcpy - copy a block of memory from one locatio
- * n to another
- * @newptr: pointer to starting address of destinatio
- * memory
- * @ptr: pointer to the starting address of the sourc
- * e memory
+ * _memcpy - copy a block of memory from one locat
+ * ion to another
+ * @newptr: pointer to starting address of destina
+ * tion memory
+ * @ptr: pointer to the starting address of the so
+ * urce memory
  * @size: size of new pointer
  * Return: nothing
  */
-
 void _memcpy(void *newptr, const void *ptr, size_t size)
 {
 	char *char_oldptr = (char *)ptr;
@@ -79,7 +77,6 @@ void _memcpy(void *newptr, const void *ptr, size_t size)
  * @s: The string to be converted
  * Return: integer
  */
-
 int _atoi(char *s)
 {
 	int sign = 1;

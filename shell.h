@@ -32,19 +32,19 @@ typedef struct builtin_c
 extern char **environ;
 char *_getenv(char *name);
 
-/** PRINTS **/
+/** PRINTs **/
 void print(char *c);
 void prompt(void);
 void get_signal(int sig);
 void print_error(char **cmd, char *sms);
 
-/** GETLINE **/
+/** GETLINe **/
 ssize_t _getline(char **user_input, size_t *n, int status);
 
-/** TOKENIZER **/
+/** TOKENIZEr **/
 char **tokenize(char *user_input);
 
-/** STRINGS **/
+/** STRINGs **/
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
 int _strncmp(const char *s1, const char *s2, size_t n);
@@ -55,14 +55,18 @@ char *_strdup(char *str);
 void _memcpy(void *newptr, const void *ptr, size_t size);
 void *_realloc(void *ptr, size_t size);
 
+void exit_shell(char **cmd, int status)
 
 
-int handle_builtin(char **cmd);
 int is_builtin(char **cmd);
+int handle_builtin(char **cmd);
+int execute_cmd(char **cmd);
+char *find_path(char *command);
 
 
 /** BUILTINs **/
 int my_cd(char **cmd);
+int my_env(__attribute__((unused)) char **cmd);
 
 #endif
 
