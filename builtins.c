@@ -38,3 +38,23 @@ int my_cd(char **cmd)
 
 	return (0);
 }
+
+/**
+ * my_env - prints the environment
+ * @cmd: command array
+ * Return: 0 on success
+ */
+int my_env(__attribute__((unused)) char **cmd)
+{
+	int i = 0;
+	int count;
+
+	while (environ[i] != NULL)
+	{
+		count = _strlen(environ[i]);
+		write(STDOUT_FILENO, environ[i], count);
+		write(STDOUT_FILENO, "\n", 1);
+		i++;
+	}
+	return (0);
+}
