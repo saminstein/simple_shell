@@ -77,6 +77,7 @@ void _memcpy(void *newptr, const void *ptr, size_t size)
  * @s: The string to be converted
  * Return: integer
  */
+/*
 int _atoi(char *s)
 {
 	int sign = 1;
@@ -103,4 +104,26 @@ int _atoi(char *s)
 		s++;
 	}
 	return (sign * num);
+}
+*/
+int _atoi(char *s)
+{
+	int sign = 1;
+	unsigned int n = 0;
+
+	do {
+		if (*s == '-')
+		{
+			sign *= -1;
+		}
+		else if (*s >= '0' &&  *s <= '9')
+		{
+			n = (n * 10) + (*s - '0');
+		}
+		else if (n > 0)
+		{
+			break;
+		}
+	} while (*s++);
+	return (sign * n);
 }
