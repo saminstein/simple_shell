@@ -37,7 +37,7 @@ You can install the simple shell by cloning this repo:
 
 ```sh
 
-$ git clone https://github.com/zinniewalter/simple_shell.git
+$ git clone https://github.com/saminstein/simple_shell.git
 
 ```
 
